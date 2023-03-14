@@ -23,6 +23,12 @@ Once the installation is complete activate the environment:
 conda activate Par_gen
 ```
 
+Finally the correct version of the VEP cache needs to be downloaded and placed in a folder path "VEP_Cache/homo_sapiens/" within the main directory of this workflow.
+Download Cache from: https://ftp.ensembl.org/pub/release-109/variation/vep/homo_sapiens_vep_109_GRCh38.tar.gz using:
 
-The correct version of the cache needs to be downloaded and placed in a folder path "VEP_Cache/homo_sapiens/" within the main directory of the workflow
-Download Cache from: https://ftp.ensembl.org/pub/release-109/variation/vep/homo_sapiens_vep_109_GRCh38.tar.gz
+```bash
+mkdir -p VEP_Cache/hmo_sapiens
+cd VEP_Cache/hmo_sapiens
+wget https://ftp.ensembl.org/pub/release-108/variation/vep/homo_sapiens_vep_108_GRCh38.tar.gz
+tar –xvzf  homo_sapiens_vep_108_GRCh38.tar.gz
+```
