@@ -3,6 +3,12 @@
 How to re-run the 'genetic variation' analysis described in Maduper,Konig,Patramanis et al 2023
 The details of the analysis are described in the supplementary of the paper.
 
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+## Download and Instalation
+
 First Clone this repository in your local computer:
 
 ```bash
@@ -10,8 +16,6 @@ git clone https://github.com/johnpatramanis/Code_for_Genetic_Diversity_Sampling.
 ```
 
 Enter the repo and install the required conda environment (Requires conda to be installed: ) which contains all of the necessary prerequisites:
-
-
 
 ```bash
 cd Code_for_Genetic_Diversity_Sampling
@@ -23,6 +27,13 @@ Once the installation is complete activate the environment:
 ```bash
 conda activate Par_gen
 ```
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+## File preparation and set up
+
 
 The we need some VCF files for this analysis. If you want to run the analysis for the same dataset as we did in our manuscript, you must use the VCF files from here:
 https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg
@@ -49,6 +60,12 @@ tar –xvzf  homo_sapiens_vep_108_GRCh38.tar.gz
 Now all we need to do is set up which VCF sample to use by adding it in this file: Vcf_File_List.txt
 Simply add 'gnomad.genomes_3_4_10_11_17_X_Y.vcf.bgz' in the first line of the file
 If you want any additional VCF files to go through the analysis, add the as new lines below that one.
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+## Execution of the workflow
 
 Finally type:
 ```bash
