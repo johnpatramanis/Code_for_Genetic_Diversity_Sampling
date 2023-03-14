@@ -47,6 +47,7 @@ SAMPLES.sort()
 rule all:
     input:
         'Gene_locs_pure.txt', ### A file with the location of each gene of interest
+        'Protein_Coverage.txt', ### A file with all sites covered by the 4 Paranthropus
         expand("{sample}_Gene_Filtered.vcf", sample=SAMPLES), ############ Initial Filter VCF
         expand("{sample}_VEP.VEP", sample=SAMPLES), ######### Get VEP for each Filtered VCF
         expand("{sample}_Processed_Variants.PV", sample=SAMPLES), ######### Second Round of Filtering, keep only SNPs that have an effect on the CANONICAL isoform of the protein and within the coverage of the ancient samples
@@ -83,6 +84,14 @@ rule Index_VCF_File:
         shell(F"bcftools index {input.VCF_FILE} -f --threads {threads}")
 
 
+rule Get_Protein_Coverage:
+    input:
+        VCF_FILES_PREPED=expand('{sample}.vcf.bgz.csi',sample=SAMPLES)
+    output:
+        Protein_Coverage_File='Protein_Coverage.txt'
+    threads:1
+    run:
+        shell(F"python3 Get_Protein_Coverage.py")
 
 
 
