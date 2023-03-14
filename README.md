@@ -25,7 +25,9 @@ conda activate Par_gen
 
 The we need some VCF files for this analysis. If you want to run the analysis for the same dataset as we did in our manuscript, you must use the VCF files from here:
 https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg
-You only need to download the relevant chromosomes. In our case these would be 3,4,1-,11,17,X and Y. Once you've downloaded them you need to merge them together using:
+You only need to download the relevant chromosomes. In our case these would be 3,4,1-,11,17,X and Y.
+
+Once you've downloaded them you need to merge them together using:
 
 ```bash
 ls gnomad.genomes.v3.1.2.hgdp_tgp.chr*.vcf.bgz > GNOMAD_CHROMOSOME_FILES
