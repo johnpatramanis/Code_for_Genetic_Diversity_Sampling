@@ -1,6 +1,6 @@
 # Code_for_Genetic_Diversity_SAmpling
 
-How to re-run the 'genetic variation' analysis described in Maduper,Konig,Patramanis et al 2023
+How to re-run the 'genetic variation' analysis described in Madupe et al 2023
 The details of the analysis are described in the supplementary of the paper.
 
 <br/><br/>
